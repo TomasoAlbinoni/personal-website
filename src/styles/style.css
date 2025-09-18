@@ -9,7 +9,7 @@ body {
 }
 
 #content {
-  padding: 0 1rem 2rem;
+  padding: 0 3rem 2rem;
 }
 
 /* Navigation bar */
@@ -26,9 +26,8 @@ nav a {
   font-weight: 600;
   transition: color 0.3s ease;
 }
-nav a:hover,
-nav a:focus {
-  color: #ffc107;
+nav a.active {
+  color: #07aeff;
 }
 
 /* Page title */
@@ -78,6 +77,47 @@ input[type="text"]#q:focus {
 #retroresult a:hover,
 #retroresult a:focus {
   text-decoration: underline;
+}
+
+.entry-title {
+  font-size: 2rem;
+  text-align: left;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.feedback-section {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.feedback-item {
+  background: #fafafa;
+  padding: 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-item p:first-child {
+  font-style: italic;
+  margin-bottom: 0.75rem;
+  color: #555;
+}
+
+.feedback-item p:last-child {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.text-with-img {
+  display: flex;
+  align-items: flex-start; /* or center */
+  gap: 1rem;
+}
+
+.text-with-img img {
+  max-width: 200px;
 }
 
 /* Responsive */

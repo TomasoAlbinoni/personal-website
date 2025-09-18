@@ -1,4 +1,4 @@
-import ReverseDictionary from "../../components/ReverseDictionary";
+import ReverseDictionary from "@/components/ReverseDictionary";
 
 export default function ReverseDutch() {
     const sourceFile = '/data/English.txt';

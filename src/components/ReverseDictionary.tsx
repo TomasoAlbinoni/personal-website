@@ -91,11 +91,11 @@ export default function ReverseDictionary({title, sourceFile, externalSite}: Rev
             <p>Search words ending in: <input type="text" id="q" name="q" autoFocus onChange={inputChanged} onKeyUp={keyUp} value={searchTerm} /> (regular expressions allowed)</p>
             <div id="retroresult">
                 {
-                resultSet.map(r => {
-                    return (
-                        <DictionaryEntry key={r} word={r} site={externalSite} />
-                    );
-                })
+                    resultSet.map(r => {
+                        return (
+                            <DictionaryEntry key={r} word={r} site={externalSite} />
+                        );
+                    })
                 }
             </div>
         </>
