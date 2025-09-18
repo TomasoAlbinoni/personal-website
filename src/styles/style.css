@@ -1,0 +1,95 @@
+/* Reset and base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  padding: 0;
+}
+
+#content {
+  padding: 0 1rem 2rem;
+}
+
+/* Navigation bar */
+nav {
+  background-color: #0f5193;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+}
+nav a {
+  color: #f8f9fa;
+  text-decoration: none;
+  margin-right: 1.5rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+nav a:hover,
+nav a:focus {
+  color: #ffc107;
+}
+
+/* Page title */
+h1.entry-title {
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: #212529;
+}
+
+/* Input and label */
+p {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+input[type="text"]#q {
+  font-size: 1.125rem;
+  padding: 0.4rem 0.6rem;
+  border: 2px solid #ced4da;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+  width: 250px;
+  max-width: 100%;
+}
+input[type="text"]#q:focus {
+  border-color: #495057;
+  outline: none;
+}
+
+/* Results container */
+#retroresult {
+  background: white;
+  border: 1px solid #dee2e6;
+  padding: 1rem;
+  border-radius: 6px;
+  max-width: 500px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  margin-bottom: 2rem;
+}
+#retroresult a {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  color: #007bff;
+  text-decoration: none;
+}
+#retroresult a:hover,
+#retroresult a:focus {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav a {
+    margin: 0.25rem 0;
+  }
+  #retroresult {
+    max-width: 100%;
+  }
+}
