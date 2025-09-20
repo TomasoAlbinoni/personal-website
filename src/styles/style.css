@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 /* Reset and base */
 body {
   margin: 0;
@@ -27,7 +29,7 @@ nav a {
   transition: color 0.3s ease;
 }
 nav a.active {
-  color: #07aeff;
+  color: #f52673;
 }
 
 /* Page title */
@@ -116,8 +118,12 @@ input[type="text"]#q:focus {
   gap: 1rem;
 }
 
+.text-with-img .text {
+  flex: 1; /* allow text to expand */
+}
+
 .text-with-img img {
-  max-width: 200px;
+  margin-left: auto; /* pushes image to the right edge */
 }
 
 /* Responsive */
