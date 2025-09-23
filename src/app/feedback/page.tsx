@@ -1,4 +1,4 @@
-import FeedbackItem from "@/components/FeedbackItem";
+import FeedbackItem from "@/app/feedback/FeedbackItem";
 import { FeedbackData } from "@/types/feedback"
 
 export default function Feedback() {
@@ -18,6 +18,11 @@ export default function Feedback() {
             position: "Software Application Developer (Sunobi)",
             comment: "Thomas and I collaborated on several projects and he's a consummate professional. Extremely knowledgeable in Unity and server technology, I was often amazed at how quickly he could solve some fairly significant problems. Always willing to help out when needed; Thomas was a great asset to our team.",
         },
+        {
+            name: "Scot Kinney",
+            position: "AstraWorlds.com",
+            comment: "Thomas has worked with us on several large projects over the years. His work was always exemplary. He would be my first call if I needed programming help in the future. He's a gentleman and a scholar!",
+        }
     ];
     const feedbackItems = feedback.map(item => {
         return (
