@@ -19,12 +19,28 @@ export default function RandomProjects() {
                 alt="Converter"
                 width={441}
                 height={323}
-                className="rounded-lg shadow-md"
+                className="rounded-lg"
             />
             </div>
 
+            <h3 className="text-xl font-medium mb-2">D3 Data Visualization</h3>
+            <div className="text-with-img flex gap-6 mb-10">
+            <div className="text">
+                <p><a target="_blank" href="https://tomasoalbinoni.github.io/NL_by_municipality/" className="text-blue-500 underline">This</a> is a project I did as part of the Udacity Data Analysis nanodegree.</p>
+            </div>
+            <a target="_blank" href="https://tomasoalbinoni.github.io/NL_by_municipality/">
+                <Image
+                    src="/netherlands.png"
+                    alt="Netherlands"
+                    width={497}
+                    height={399}
+                    className="rounded-lg"
+                />
+            </a>
+            </div>
+
             <h3 className="text-xl font-medium mb-2">Reverse Dictionaries</h3>
-            <p className="mb-2">Just for fun.</p>
+            <p className="mb-2">Just for fun: Web-based reverse dictionaries of Dutch and English, written originally in standard HTML and JavaScript, rewritten for this website in React/Next.js.</p>
             <ul className="list-disc list-inside space-y-1">
             <li key="dutch"><Link href="/reverse-dutch" className="text-blue-500 underline">Dutch</Link></li>
             <li key="english"><Link href="/reverse-english" className="text-blue-500 underline">English</Link></li>
