@@ -9,7 +9,7 @@ type ReverseDictProps = {
     externalSite: string;
 };
 
-export default function ReverseDictionary({title, sourceFile, externalSite}: ReverseDictProps) {
+export default function ReverseDictionary({ title, sourceFile, externalSite }: ReverseDictProps) {
     const [searchTerm, setSearchTerm] = useState<string>('');
     const [lines, setLines] = useState<string[]>([]);
     const [resultSet, setResultSet] = useState<string[]>([]);
@@ -33,25 +33,25 @@ export default function ReverseDictionary({title, sourceFile, externalSite}: Rev
         setSearchTerm(query);
         getWordsEndingIn(query);
     }, [getWordsEndingIn]);
-    
+
     useEffect(() => {
         if (history.state?.lines) {
             setLines(history.state.lines);
         } else {
             fetch(sourceFile)
-            .then(res => res.text())
-            .then(text => {
-                const items: string[] = text.split(/\r?\n/);
-                setLines(items);
-                history.replaceState({ lines: items }, "");
-            });
+                .then(res => res.text())
+                .then(text => {
+                    const items: string[] = text.split(/\r?\n/);
+                    setLines(items);
+                    history.replaceState({ lines: items }, "");
+                });
         }
     }, [sourceFile]);
 
     useEffect(() => {
-    if (lines.length > 0) {
-        getQuery();
-    }
+        if (lines.length > 0) {
+            getQuery();
+        }
     }, [lines, getQuery]);
 
     useEffect(() => {
@@ -71,8 +71,8 @@ export default function ReverseDictionary({title, sourceFile, externalSite}: Rev
         };
     }, []);
 
-    function keyUp(e: React.KeyboardEvent<HTMLInputElement>) {
-        if (e.keyCode == 13) {
+    function keyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+        if (e.key === "Enter") {
             const stateObj = {
                 lines
             };
@@ -88,7 +88,7 @@ export default function ReverseDictionary({title, sourceFile, externalSite}: Rev
     return (
         <>
             <h1 className="entry-title">{title}</h1>
-            <p>Search words ending in: <input type="text" id="q" name="q" autoFocus onChange={inputChanged} onKeyUp={keyUp} value={searchTerm} /> (regular expressions allowed)</p>
+            <p>Search words ending in: <input type="text" id="q" name="q" autoFocus onChange={inputChanged} onKeyDown={keyDown} value={searchTerm} /> (regular expressions allowed)</p>
             <div id="retroresult">
                 {
                     resultSet.map(r => {
