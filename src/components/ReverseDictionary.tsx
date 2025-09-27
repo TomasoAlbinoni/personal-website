@@ -16,7 +16,7 @@ export default function ReverseDictionary({ title, sourceFile, externalSite }: R
 
     const getWordsEndingIn = useCallback((q: string) => {
         if (q) {
-            const regex: RegExp = new RegExp(`^.*${q}$`);
+            const regex: RegExp = new RegExp(`^.*${q}$`, "i");
             let found: string[] = lines.filter(word => regex.test(word));
             const reverse: string[] = found.map(word => word.split("").reverse().join(""));
             reverse.sort();
