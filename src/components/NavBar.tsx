@@ -8,10 +8,16 @@ export default function NavBar() {
 
     return (
         <nav>
-            <Link className={pathname === "/" ? "active" : ""} href="/">Home</Link>
-            <Link className={pathname === "/projects" ? "active" : ""} href="/projects">Projects</Link>
-            <Link className={pathname === "/feedback" ? "active" : ""} href="/feedback">Feedback</Link>
-            <Link className={pathname === "/contact" ? "active" : ""} href="/contact">Contact</Link>
+            <input type="checkbox" id="menu-toggle" />
+            <label htmlFor="menu-toggle" className="burger">
+                <span></span><span></span><span></span>
+            </label>
+            <div className="menu">
+                <Link className={pathname === "/" ? "active" : ""} href="/">Home</Link>
+                <Link className={pathname === "/projects" ? "active" : ""} href="/projects">Projects</Link>
+                <Link className={pathname === "/feedback" ? "active" : ""} href="/feedback">Feedback</Link>
+                <Link className={pathname === "/contact" ? "active" : ""} href="/contact">Contact</Link>
+            </div>
         </nav>
     );
 };
